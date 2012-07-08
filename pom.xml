@@ -78,6 +78,11 @@
 			<artifactId>spring-jdbc</artifactId>
 			<version>${org.springframework.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
 
 		<dependency>
 			<groupId>javax.servlet.jsp.jstl</groupId>
@@ -165,16 +170,6 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-validator</artifactId>
-			<version>5.0.0.Alpha1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-validator-annotation-processor</artifactId>
-			<version>5.0.0.Alpha1</version>
-		</dependency>
 	</dependencies>
 
 	<build>
@@ -245,7 +240,6 @@
 
 		<org.springframework.version>3.2.0.M1</org.springframework.version>
 		<tiles.version>2.2.2</tiles.version>
-		<!-- <tiles.version>3.0.0</tiles.version> -->
 	</properties>
 
 	<repositories>

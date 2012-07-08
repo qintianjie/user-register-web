@@ -36,11 +36,6 @@ code {
 	font: .9em "Courier New", Monaco, Courier, monospace;
 }
 
-error {
-	color: red;
-	font-size: 18pt;
-}
-
 a img {
 	border: none;
 }
@@ -78,8 +73,7 @@ a:link,a:visited {
 	text-decoration: underline;
 }
 
-/*
 a:link:after,a:visited:after {
 	content: " (" attr(href) ")";
 	font-size: 90%;
-} */
+}

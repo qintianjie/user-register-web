@@ -1,0 +1,370 @@
+<script src="http://image.tianji.com/js/poke.js"></script>
+<div id="navigation">
+	<div class="wrapper">
+		<ul id="nav-primary">
+			<li id="homepage"><a href="http://my.tianji.com/MemberIndex2"> 首页 </a></li>
+			<li>
+				<a href="http://p.tianji.com/profile/viewProfileC"> 资料 <img class="arrow" src="http://image.tianji.com/img/global/blank.gif" alt=""/></a>
+				<ul>
+					<li><a href="http://p.tianji.com/profile/viewProfileC"> 编辑资料 </a></li>
+					<li class="sorter"><a href="http://p.tianji.com/profile/previewProfile?from=profile"> 预览资料 </a></li>
+					<li><a href="http://p.tianji.com/profile/workManage?locale=zh_CN"> 添加工作经历 </a></li>
+					<li class="sorter"><a href="http://p.tianji.com/profile/eduManage?locale=zh_CN"> 添加教育背景 </a></li>
+					<li><a href="http://p.tianji.com/profile/portraitUpload"> 上传头像 </a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="http://p.tianji.com/profile/pymi/index?from=nav"> 找人 <img class="arrow" src="http://image.tianji.com/img/global/blank.gif" alt=""/></a>
+				<ul>
+					<li class="sorter"><a href="http://search.tianji.com/Search"> 高级搜索 </a></li>
+					<li><a href="http://p.tianji.com/profile/pymi/index"> 你可能感兴趣的人 </a></li>
+					<li class="sorter"><a href="http://m.tianji.com/inv/Invitation/SearchFriend"> 你可能认识的人 </a></li>
+					<li><a href="http://m.tianji.com/inv/Invitation/BatchInviteFriend"> 邀请好友 </a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="http://job.tianji.com/sr/home?trk=jobs_top"> 职场 <img class="arrow" src="http://image.tianji.com/img/global/blank.gif" alt=""/></a>
+				<ul>
+					<li><a href="http://job.tianji.com/sr/position"> 浏览职位 </a></li>
+					<li class="sorter"><a href=" http://job.tianji.com/sr/resume"> 浏览人才 </a></li>
+					<li><a href="http://job.tianji.com/sr/recruiting/progress"> 我的招聘中心 </a></li>
+					<li><a href="http://job.tianji.com/sr/jobhunting/progress"> 我的求职中心 </a></li>
+					<li><a href="http://job.tianji.com/sr/account/subscribe/list"> 职场订阅 </a></li>
+					<li><a href="http://job.tianji.com/sr/orders/select"> 支付平台 </a></li>
+				</ul>
+			</li>
+			<!-- 
+			<li>
+				<a href="http://app.tianji.com/ask/index.action"> 问答 <img class="arrow" src="http://image.tianji.com/img/global/blank.gif" alt=""/></a>
+				<ul>
+					
+					<li class="sorter"><a href="http://app.tianji.com/ask/index.action"> 问答首页 </a></li>
+					<li><a href="http://app.tianji.com/ask/single.action?method=singleQuestions"> 我的问答 </a></li>
+					<li><a href="http://app.tianji.com/ask/search.action?method=index"> 搜索问答 </a></li>
+					<li><a href="http://app.tianji.com/ask/operation.action?method=questionAddView"> 提出问题 </a></li>
+					<li><a href="http://app.tianji.com/ask/cate.action?method=index"> 回答问题 </a></li>
+				</ul>
+			</li>
+			 -->
+			<li>
+				<a href="http://club.tianji.com/group/groupIndex"> 群组 <img class="arrow" src="http://image.tianji.com/img/global/blank.gif" alt=""/></a>
+				<ul>
+					<li class="sorter"><a href="http://club.tianji.com/group/groupIndex"> 群组首页 </a></li>
+					<li><a href=" http://club.tianji.com/group/mygroup"> 我的群组 </a></li>
+					<li><a href="http://club.tianji.com/group/groupCreateOrApply"> 创建群组 </a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="http://e.tianji.com/event/index"> 活动 <img class="arrow" src="http://image.tianji.com/img/global/blank.gif" alt=""/></a>
+				<ul>
+					<li class="sorter"><a href="http://e.tianji.com/event/index"> 活动首页 </a></li>
+					<li><a href="http://e.tianji.com/event/myJoined"> 我的活动 </a></li>
+					<li><a href="http://e.tianji.com/event/createEvent"> 发布活动 </a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="http://bbs.tianji.com/bbs/index"> 论坛 <img class="arrow" src="http://image.tianji.com/img/global/blank.gif" alt=""/></a>
+				<ul>
+					<li class="sorter"><a href="http://bbs.tianji.com/bbs/index"> 论坛首页 </a></li>
+					<li><a href="http://bbs.tianji.com/bbs/themeList?dateType=2"> 我发表的主题 </a></li>
+					<li class="sorter"><a href="http://bbs.tianji.com/bbs/replyList?dateType=2"> 我回复的主题 </a></li>
+					<li><a href="http://bbs.tianji.com/bbs/create"> 发表主题 </a></li>
+				</ul>
+			</li>
+		</ul>
+		<!--
+		<p id="hingeWord">
+			<strong>热门搜索：</strong>
+		</p>
+		-->
+		<ul id="hingeWord">
+			<li style="display:none" class="recentlyViewedCount"><a href="http://my.tianji.com/Mytianji/HitProfileUsers?from=sidebar" target="_blank" style="text-decoration:underline;margin-left:0;">最近浏览(<span class="recentlyViewedCount-side"></span>人</a>)</li>
+				<li style="display:none" class="hitAfterLastCount"><a href="http://my.tianji.com/Mytianji/HitProfileUsers?from=sidebar" target="_blank" style="text-decoration:underline;margin-left:0;">最新浏览</a>(<span class="hitAfterLastCount-side"></span>人)</li>
+				<li style="display:none" class="navPymk"><a href="http://m.tianji.com/inv/Invitation/SearchFriend" target="_blank" style="text-decoration:underline;">您可能认识的人</a>(<span class="navPymk-count"></span>人)</li>
+				<li><a href="http://p.tianji.com/profile/pymi/index?from=nav" target="_blank" style="text-decoration:underline;">您可能感兴趣的人</a><img style="position: relative; top: -4px;" src="http://image.tianji.com/core/image/my/new.gif"></li>
+				
+		</ul>
+		<div id="headerTools">
+			<ul id="headerLanguages">
+				<li class="baseline"><a href="http://p.tianji.com/profile/changeLocale?locale=en_US" class="clickChangeLang" onclick="return false;">English site (英文版)</a></li>
+			</ul>
+			<ul id="headerShortcuts">
+				<!-- 
+				<li id="np-im-container" class="baseline"><a href="http://im.tianji.com/c/im/chat" class="implink"><img id="iconHeaderOnline" src="http://image.tianji.com/img/global/blank.gif" alt=""/>在线好友</a></li>
+				 -->
+				<li style="border-left:none;"><!--img id="iconFeedback" src="http://image.tianji.com/img/global/blank.gif" alt=""/--><a href="http://www.tianji.com/Report" target="_blank">问题建议</a></li>
+				<!--
+				<li id="globalCursorTrans" onclick="K.$('cursorTransDsc').style.display='';hideFlash();"><span class="link">需要翻译？</span></li>
+				-->
+			</ul>
+			<form id="headerSearchForm" action="http://search.tianji.com/Search" method="get" target="_blank">
+				<input type="hidden" name="t" value="search"/>
+				<input type="hidden" name="isPast" value="false"/>
+				
+				<label class="selectType">
+					<span class="selectBorder">
+						<select id="inputHeaderSerachType" name="ty">
+							<option value="1"> 找人 </option>
+							<option value="2"> 论坛 </option>
+							<option value="3"> 活动 </option>
+						</select>
+					</span>
+				</label>
+				<label class="inputKey">
+					<img id="iconHeaderSerach" src="http://image.tianji.com/img/global/blank.gif" alt=""><input id="inputHeaderKeyword" type="text" value="人名、公司、职位或学校" maxlength="50"/>
+					<input id="inputHeaderKeywordEncoded" type="hidden" name="keyword">
+				</label>
+				<label class="buttonSearch">
+					<input class="button butSubmit" type="submit" value="搜索"/> &nbsp;
+					<a href="http://search.tianji.com/Search">高级</a>
+				</label>
+			</form>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	//<![CDATA[
+
+	$.fn.extend({
+		hoverMenu:function(s){
+			return this.each(function(){
+				if (!this._hmId) {
+					this._hmId = $.event.guid++;
+					//$.event._acCache[this._acId] = new AutoComplete(this);
+				}
+				var $this=$(this),
+				openEle=this.openEle=($this.find('ul').length?$this.find('ul'):$this.next('ul'))//.appendTo('body')
+					//.css('left',getLeft(this)-104)
+					//.css('top',$this.height())
+					.attr('id','openEle'+this._hmId);
+				$this.click(function(){
+					this.openEle.show();
+					try{$('#openEle'+this._hmId).next("iframe").show()}catch(e){}
+						//.css('left',getLeft(this)-54)
+						//.css('top',getTop(this)+$this.height());
+				}).hover(function(){
+					this.openEle.show();
+					try{$('#openEle'+this._hmId).next("iframe").show()}catch(e){}
+						//.css('left',getLeft(this)-54)
+						//.css('top',getTop(this)+$this.height());
+				},function(){
+					this.openEle.trigger('close');
+				}).parent().css('position:relative;display:block');
+				this.openEle.bind('close',function(){
+					this.ttc=setTimeout('$("#'
+							+this.id
+							+'").hide();try{$("#'
+							+this.id
+							+'").next("iframe").hide()}catch(e){}',200);
+				});
+				this.openEle.mouseover(function(){
+					clearTimeout(this.ttc);
+				}).mouseout(function(){
+					this.ttc=setTimeout('$("#'
+							+this.id
+							+'").hide();try{$("#'
+							+this.id
+							+'").next("iframe").hide()}catch(e){}',200);
+				}).bind('clearTtc',function(){if(this.ttc)clearTimeout(this.ttc);});
+				this.openEle.contents().find("[nodeType=1]")
+					.bind('clearTtc',function(){if(this.parentNode.tt)clearTimeout(this.parentNode.tt);})
+					.mouseover(function(){$(this.parentNode).trigger('clearTtc')});
+				if($.browser.msie&&parseInt($.browser.version)<7){
+					this.openEle.mask=this.openEle.after('<iframe style="width:'
+						+(parseInt(this.openEle.width())+2)
+						+'px;height:'
+						+(parseInt(this.openEle.height())+2)
+						+'px;overflow:hidden;position:absolute;z-index:-1;top:28px;left:0;display:none" src="about:blank" frameborder="0"></iframe>');
+				}
+			});
+		}
+	});
+	$('#inputHeaderKeyword')
+		.attr('autoComplete','off')
+		.focus(function(){
+			this.value="";
+		}).blur(function(){
+			if(this.value==''){
+				switch ($('#inputHeaderSerachType').get(0).value) {
+					case '1' :
+						$('#inputHeaderKeyword').val('人名、公司、职位或学校');
+						break;
+					case '2' :
+						$('#inputHeaderKeyword').val('请输入搜索关键词');
+						break;
+					case '3' :
+						$('#inputHeaderKeyword').val('请输入搜索关键词');
+						break;
+				}
+			}
+		})
+		.change(function(){
+			$('#inputHeaderKeywordEncoded').val(this.value);
+			//$('#inputHeaderKeywordEncoded').val(encodeURI(this.value));
+		}).change();
+	$('#headerSearchForm').submit(function(){
+		switch ($('#inputHeaderKeyword').get(0).value) {
+			case '人名、公司、职位或学校' :
+				return false;
+			case '请输入搜索关键词' :
+				return false;
+			case '' :
+				return false;
+		}
+		$('#inputHeaderKeywordEncoded').val($('#inputHeaderKeyword').val());
+		//$('#inputHeaderKeywordEncoded').val(encodeURI($('#inputHeaderKeyword').val()));
+	});
+	$('#inputHeaderSerachType').change(function(){
+		//var type=$('#inputHeaderSerachType').get(0).value;
+		switch (this.value) {
+			case '1' :
+				$('#headerSearchForm').attr('action','http://search.tianji.com/Search');
+				$('#inputHeaderKeywordEncoded').attr('name','keyword');
+				$('#inputHeaderKeyword').val('人名、公司、职位或学校');
+				break;
+			case '2' :
+				$('#headerSearchForm').attr('action','http://bbs.tianji.com/bbs/topic/search');
+				$('#inputHeaderKeywordEncoded').attr('name','q');
+				$('#inputHeaderKeyword').val('请输入搜索关键词');
+				break;
+			case '3' :
+				$('#headerSearchForm').attr('action','http://e.tianji.com/event/search');
+				$('#inputHeaderKeywordEncoded').attr('name','keyword');
+				$('#inputHeaderKeyword').val('请输入搜索关键词');
+				break;
+		}
+		//return true;
+	});
+	function hotKeywords(string){
+		var keywordBody=$('#hingeWord');
+		if(!string){
+			keywordBody.hide();
+			return;
+		}
+		var keywords=string.split(',');
+		for(key in keywords){
+			keywordBody.append('<a href="http://search.tianji.com/Search?keyword='+encodeURI(keywords[key])+'" target="_blank">'+keywords[key]+'</a> ');
+		}
+		/*$('#hingeWord .link').click(function(){
+			$('#inputHeaderKeyword').val(this.innerHTML);
+			$('#headerSearchForm').submit();
+		});*/
+	}
+	function getProfileSide(){
+	$.ajax({
+		'url':'http://p2.tianji.com/profile/profileStat?uid='+myId+'&locale=zh_CN',
+		'dataType':'jsonp',
+		'success':function(data){
+			//得到资料完整度
+			
+			if(data.hitAfterLastCount==0){
+				$('.recentlyViewedCount').css('display','inline');
+				$('.recentlyViewedCount-side').text(data.recentlyViewedCount);									
+			}else if(data.recentlyViewedCount!=0){
+				$('.hitAfterLastCount').css('display','inline');
+				$('.hitAfterLastCount-side').text(data.hitAfterLastCount);			
+			}
+			if($('#profile-percent-side').attr("id")=="profile-percent-side"){
+			var html =[];
+			
+			  $('#profile-percent-side').prepend(' <div id="personInfoPercent-side" style="width: 31px;"><div style="cursor:pointer;width:'+ data.profilePercent+'%;" onclick="gotoEditProfile();"></div></div><img src="http://image.tianji.com/css/pic/iconQuestion.gif" alt="[?]" width="11" height="11" class="show-help" title="" style="left:34px;top:-1px;" />');
+			   html.push('<div id="tipProfileComleted" style="display:none;position:absolute;z-index:10;padding:3px;border:1px solid #9b6702;color:#9b6702;background:#ffffcd"><img src="http://image.tianji.com/img/mytianji/tipProfilePercent.gif" style="left:45%;position:absolute;top:-7px;">')                   
+				if(data.profilePercent!=100){
+					html.push(' <div id="how-to-increase-pp-side" style="display:none">');
+					if(data.toBeFilled=='education'){
+						html.push('<span>增加您的教育经历，资料完整度将增加15%</span>');
+					}else if(data.toBeFilled=='workExpr1'){
+						 html.push('<span>添加您的工作经历，资料完整度将增加25%</span>');
+					}else if(data.toBeFilled=='workExpr2'){
+						 html.push('<span>继续添加您的工作经历，资料完整度将增加15%</span>');
+					}else if(data.toBeFilled=='workExpr3'){
+						 html.push('<span>继续添加您的工作经历，资料完整度将增加15%</span>');
+					}else if(data.toBeFilled=='photo'){
+						 html.push('<span>上传头像，资料完整度将增加5%</span>');
+					}else if(data.toBeFilled=='summary'){
+						 html.push('<span>增加您的职业描述，资料完整度将增加5%</span>');
+					}else if(data.toBeFilled=='speciality'){
+						 html.push('<span>完成您的职业描述，资料完整度将增加5%</span>');
+					}else if(data.toBeFilled=='recommendation1'){
+						 html.push('<span>邀请您的三个好友为您撰写职业评价，资料完整度将增加5%</span>');
+					}else if(data.toBeFilled=='recommendation2'){
+						 html.push('<span>继续邀请您的两个好友为您撰写职业评价，资料完整度将增加5%</span>');
+					}else if(data.toBeFilled=='recommendation3'){
+						 html.push('<span>继续邀请您的一个好友为您撰写职业评价，资料完整度将增加5%</span>');
+					}else  html.push('<span></span>');   
+					html.push('</div>'); 
+		
+				}  
+			html.push('资料完整度：<span id="profileCompletedPercentage-side">'+data.profilePercent+'</span>%</strong><div>');          
+			$('body').append(html.join('')); 
+			$("#tipProfileComleted").css("top",$("#profile-percent-side").offset().top+20).css("left",$("#profile-percent-side").offset().left-15)
+		//	$('#profileCompletedPercentage').text(data.profilePercent);  
+			$('#profile-percent-side .show-help').hover(function(){ 
+					$('#tipProfileComleted').css('display','block');
+					$("#tipProfileComleted").css("top",$("#profile-percent-side").offset().top+20).css("left",$("#profile-percent-side").offset().left-20)
+				},function(){
+					$('#tipProfileComleted').css('display','none');
+				  });       
+			}
+			/*
+			//总浏览次数
+			$('#profilePageview-side').text(data.viewedCount);
+			//被关注人数
+			if(data.attentionCount > 0){
+				$('#attentionCount-side').text(data.attentionCount)
+			}
+			else{
+				$('#attentionCount-side').text('0')
+			}
+			
+			//最新浏览次数
+			$('#hitProfieUserCountWeekly-side').text(data.recentlyViewedCount);
+			*/
+		}
+	});	
+	$.ajax({
+		'url':'http://pymk.tianji.com/suggestion/jsonp/pymk/count?userId='+myId,
+		'dataType':'jsonp',
+		'success':function(data){
+			$(".navPymk").show();
+			$(".navPymk-count").text(data.count)
+		}
+	})
+	
+	
+}
+function fixProfileSide(){
+	if($.browser.msie&&$('#profilePageview-side').html()==''){
+		getProfileSide();
+	}
+}
+function gotoEditProfile(){
+	window.open("http://p.tianji.com/profile/basicInfo?locale=zh_CN")
+}
+	//]]>
+	
+	
+	
+	$(document).ready(function(){
+		$('#nav-primary li a').hoverMenu();
+	});
+	/*var configChagelang = {
+		eventElement:"clickChangeLang",
+		windowType:"confirm",
+		howToBegin:'click',
+		OptionalConfig:{
+			canOpreat:'N'
+		},
+		confirmMethod:{
+			submitOperat:function (){window.location.href = "http://p.tianji.com/profile/changeLocale?locale=en_US"},
+			cancleOperat:function (){},
+			title:"Are you sure you want to switch to the English version?",
+			content:"You are going to enter Tianji English version and your language preference setting will also be switched to English at the same time.Moreover,the features and the rules of the 2 versions are also different.Are you sure you want to switch to the English version?"
+		}
+	}
+	var changeLangCue = new magicLayer(configChagelang);*/
+	tipChangeLang()
+	//]]>
+</script><!--
+<script type="text/javascript" charset="utf-8" src="http://image.tianji.com/adv/nav/hotKeywords_zh.js"></script>
+-->
