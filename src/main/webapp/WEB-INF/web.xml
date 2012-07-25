@@ -4,6 +4,7 @@
 	version="3.0">
 	<display-name>User Register</display-name>
 
+	<!-- ============================== Encoding filter ================================================== -->
 	<filter>
 		<filter-name>characterEncodingFilter</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -19,6 +20,7 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 
+	<!-- ============================== Spring ContextLoader Listener ================================================== -->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
@@ -28,6 +30,7 @@
 	<!-- <listener> <listener-class>org.springframework.web.context.request.async.StandardServletAsyncWebRequest</listener-class> 
 		</listener> -->
 
+	<!-- ========================= Transfer HTTP Methods to REST way in Spring MVC ==================================== -->
 	<filter>
 		<filter-name>hiddenHttpMethodFilter</filter-name>
 		<filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
@@ -38,6 +41,17 @@
 		<servlet-name>userRegister</servlet-name>
 	</filter-mapping>
 
+	<!-- ============================== Spring Security ================================================== -->
+	<filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- ============================== User Register Servlet ==================================================== -->
 	<servlet>
 		<servlet-name>userRegister</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -54,12 +68,8 @@
 		<error-code>404</error-code>
 		<location>/Error404.html</location>
 	</error-page>
-
-	<welcome-file-list>
-		<welcome-file>
-			index.jsp
-		</welcome-file>
-	</welcome-file-list>
+	<!-- <error-page> <error-code>500</error-code> <location>/Error500.html</location> 
+		</error-page> -->
 
 	<jsp-config>
 		<jsp-property-group>
@@ -88,4 +98,10 @@
 		<url-pattern>*.css</url-pattern>
 	</servlet-mapping>
 
+
+	<welcome-file-list>
+		<welcome-file>
+			index.jsp
+		</welcome-file>
+	</welcome-file-list>
 </web-app>

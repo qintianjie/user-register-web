@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 5.5.22, for linux2.6 (x86_64)
+-- MySQL dump 10.13  Distrib 5.5.24, for Linux (x86_64)
 --
 -- Host: localhost    Database: colorcc
 -- ------------------------------------------------------
@@ -16,6 +16,32 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `ROLE`
+--
+
+DROP TABLE IF EXISTS `ROLE`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ROLE` (
+  `ID` int(11) NOT NULL,
+  `ROLE` varchar(20) NOT NULL,
+  `DESCRIPTION` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `ROLE_UNIQUE` (`ROLE`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ROLE`
+--
+
+LOCK TABLES `ROLE` WRITE;
+/*!40000 ALTER TABLE `ROLE` DISABLE KEYS */;
+INSERT INTO `ROLE` VALUES (1,'USER',NULL),(2,'ADMIN',NULL),(3,'SUPERUSER',NULL);
+/*!40000 ALTER TABLE `ROLE` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `USER`
 --
 
@@ -23,14 +49,15 @@ DROP TABLE IF EXISTS `USER`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `USER` (
-  `ID` int(11) NOT NULL DEFAULT '0',
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `EMAIL` varchar(40) CHARACTER SET latin1 NOT NULL,
   `PASSWD` varchar(41) CHARACTER SET latin1 NOT NULL,
   `SALT` varchar(8) CHARACTER SET latin1 NOT NULL,
   `REGISTER_TIME` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `status` tinyint(4) DEFAULT '0',
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `STATUS` tinyint(4) DEFAULT '0',
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `EMAIL_UNIQUE` (`EMAIL`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -94,6 +121,30 @@ LOCK TABLES `USER_GROUP` WRITE;
 /*!40000 ALTER TABLE `USER_GROUP` DISABLE KEYS */;
 /*!40000 ALTER TABLE `USER_GROUP` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `USER_ROLE`
+--
+
+DROP TABLE IF EXISTS `USER_ROLE`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `USER_ROLE` (
+  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+  `USER_ID` int(11) NOT NULL,
+  `ROLE_ID` int(11) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `USER_ROLE`
+--
+
+LOCK TABLES `USER_ROLE` WRITE;
+/*!40000 ALTER TABLE `USER_ROLE` DISABLE KEYS */;
+/*!40000 ALTER TABLE `USER_ROLE` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -104,4 +155,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-05-12  7:44:37
+-- Dump completed on 2012-07-19 18:49:17

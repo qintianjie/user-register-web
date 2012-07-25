@@ -32,6 +32,14 @@ h1,h2,h3,h4,h5,h6 {
 	font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
 }
 
+h1 {
+	color: red;
+}
+
+h2 {
+	color: green;
+}
+
 code {
 	font: .9em "Courier New", Monaco, Courier, monospace;
 }

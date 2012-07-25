@@ -9,19 +9,18 @@
      					http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
      					http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
      					http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
-     					
-    <aop:aspectj-autoproxy /> 
-
-	<context:component-scan base-package="com.colorcc.user.register.controller, 
-										  com.colorcc.user.errors.controller,
-										  com.colorcc.rest.user.service, 
-										  com.colorcc.rest.user.service,
-										  com.colorcc.rest.user.bean.dto,
-										  com.colorcc.rest.user.resource.transfer, 
-										  com.colorcc.user.register.aop,
-										  com.colorcc.test.service" />
+     
+    <!-- Tiles view resolver configuration. -->
+	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer"
+		p:definitions="/WEB-INF/tiles/user-register-tiles.xml, /WEB-INF/tiles/errors-tiles.xml" />
+		
+	<bean id="tilesViewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver"
+		p:viewClass="org.springframework.web.servlet.view.tiles2.TilesView" />
 	
-
+	<import resource="config/user-register/user-register-mybatis3-mapper.xml" />
+						
+    <aop:aspectj-autoproxy /> 
+    <context:annotation-config />
 	<mvc:annotation-driven validator="validator" /> 
 	
 	<!-- Validation configuration. -->
@@ -37,12 +36,13 @@
 			</list>
 		</property>
 	</bean>
+	
+	<context:component-scan base-package="com.colorcc.user.errors.controller,
+										  com.colorcc.user.register.controller,
+										  com.colorcc.user.resource.transfer,
+										  com.colorcc.user.register.aop,
+										  com.colorcc.user.service, 
+										  com.colorcc.user.bean.dto" />
 
-	<!-- Tiles view resolver configuration. -->
-	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer"
-		p:definitions="/WEB-INF/tiles/user-register-tiles.xml, /WEB-INF/tiles/errors-tiles.xml" />
-		
-	<bean id="tilesViewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver"
-		p:viewClass="org.springframework.web.servlet.view.tiles2.TilesView" />
 	
 </beans>

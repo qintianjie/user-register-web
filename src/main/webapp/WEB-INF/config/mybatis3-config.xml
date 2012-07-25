@@ -2,9 +2,17 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<typeAliases>
-		<typeAlias alias="restUser" type="com.colorcc.rest.user.model.User" />
+		<typeAlias alias="securityUser" type="com.colorcc.common.security.model.SecurityUser" />
+		<typeAlias alias="securityRole" type="com.colorcc.common.security.model.SecurityRole" />
+		<typeAlias alias="securityUserRole" type="com.colorcc.common.security.model.SecurityUserRole" />
+		
+		<typeAlias alias="restUser" type="com.colorcc.user.model.User" />
 	</typeAliases>
 	<mappers>
-		<mapper resource="com/colorcc/rest/user/mapper/UserMapper.xml" />
+		<mapper resource="com/colorcc/common/security/mapper/SecurityUserMapper.xml" />
+		<mapper resource="com/colorcc/common/security/mapper/SecurityRoleMapper.xml" />
+		<mapper resource="com/colorcc/common/security/mapper/SecurityUserRoleMapper.xml" />
+		
+		<mapper resource="com/colorcc/user/mapper/UserMapper.xml" />
 	</mappers>
 </configuration>
